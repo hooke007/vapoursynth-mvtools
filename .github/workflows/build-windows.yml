@@ -35,7 +35,7 @@ jobs:
             mingw-w64-x86_64-fftw
       - name: Build vs-mvtools
         run: |
-          meson setup build --optimization=2 --debug=false --prefer-static --default-library=static -Dcpp_link_args='-static'
+          meson setup build --optimization=2 --prefer-static --default-library=static -Dcpp_link_args='-static'
           meson compile -vC build
       - name: Export version
         run: |
